@@ -1,0 +1,115 @@
+{
+  "flex": {
+    "scope": "css, scss",
+    "prefix": "flex",
+    "body": [
+      "display: flex;",
+      "flex-direction: column;",
+      "justify-content: center;",
+      "align-items: center;"
+    ],
+    "description": "flex va"
+  },
+
+  "grid auto": {
+    "scope": "css, scss",
+    "prefix": "grid-fit-fill",
+    "body": [
+      "display: grid;",
+      "grid-template-columns: repeat(${1|auto-fit,auto-fill|}, minmax(${2:360}px, 1fr));",
+      "grid-gap: ${3:20}px;"
+    ],
+    "description": "grid auto fit/fill"
+  },
+
+  "background with overlay": {
+    "scope": "css, scss",
+    "prefix": "bg: linear-gradient, url",
+    "body": "background: linear-gradient(hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 0%, 0.2)),url(${1:https://web2033.com/cdn/jpg/w/fashion/64-1920w.jpg}) center / cover;",
+    "description": "background with overlay"
+  },
+
+  "background center/cover": {
+    "scope": "css, scss",
+    "prefix": "bg: url, center/cover",
+    "body": "background: url(${1:https://web2033.com/cdn/jpg/w/bg-striped/091-1920w.jpg}) center / cover;",
+    "description": "background center/cover"
+  },
+
+  "transform: translateX": {
+    "scope": "css, scss",
+    "prefix": "tr: trX",
+    "body": "transform: translateX($0);",
+    "description": "transform: translateX()"
+  },
+
+  "transform: translateY": {
+    "scope": "css, scss",
+    "prefix": "tr: trY",
+    "body": "transform: translateY($0);",
+    "description": "transform: translateY()"
+  },
+
+  "transform": {
+    "scope": "css, scss",
+    "prefix": "transform: *",
+    "body": "transform: ${1|translate,translateZ,rotate,rotateX,rotateY,rotateZ,scale,scaleX,scaleY,scaleZ,skew,skewX,skewY,perspective|}($0);",
+    "description": "transform options"
+  },
+
+  "box-shadow": {
+    "scope": "css, scss",
+    "prefix": "box-shadow: example*",
+    "body": "box-shadow: 0px 5px 15px 0px hsla(0, 0%, 0%, 0.2);",
+    "description": "box-shadow example"
+  },
+
+  "color-var": {
+    "scope": "css, scss",
+    "prefix": "color: var(--*)",
+    "body": "color: ${1|var(--primary),var(--accent),var(--header),var(--text),var(--bg), white|};",
+    "description": "color using variable"
+  },
+
+  "display": {
+    "scope": "css, scss",
+    "prefix": "display: *",
+    "body": "display: ${1|grid,flex,none,block,inline,inline-block,inline-grid,inline-flex|};",
+    "description": "display options"
+  },
+
+  "position": {
+    "scope": "css, scss",
+    "prefix": "position: *",
+    "body": "position: ${1|relative,absolute,fixed,sticky|};",
+    "description": "position options"
+  },
+
+  "root": {
+    "scope": "css, scss",
+    "prefix": "root",
+    "body": [
+      ":root {",
+      "\t--primary: hsl(215, 58%, 44%);",
+      "\t--accent: hsl(35, 100%, 63%);",
+      "\t--header: hsl(0, 0%, 10%);",
+      "\t--text: hsl(0, 0%, 17%);",
+      "\t--bg: hsl(0, 0%, 93%);",
+      "}"
+    ],
+    "description": ":root with variables"
+  },
+
+  "media": {
+    "scope": "css, scss",
+    "prefix": "media(){}",
+    "body": [
+      "@media (${1|max-width,min-width|}: ${2|479,480,767,768,980,981|}px) {",
+      "\t${3:body} {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "description": "media queries"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "document.querySelector": {
+    "prefix": "qs",
+    "body": "document.querySelector('$0');",
+    "description": "document.querySelector"
+  },
+
+  "document.querySelectorAll": {
+    "prefix": "qsa",
+    "body": "document.querySelectorAll('$0');",
+    "description": "document.querySelectorAll"
+  },
+
+  "qs-ev-cb": {
+    "prefix": "qs-ev-cb",
+    "body": "document.querySelector('$1').addEventListener('${2:click}', ${3:callback});",
+    "description": "qs + event + named cb"
+  },
+
+  "qsa-ev-cb": {
+    "prefix": "qsa-ev-cb",
+    "body": "document.querySelectorAll('$1').addEventListener('${2:click}', ${3:callback});",
+    "description": "qsa + event + named cb"
+  },
+
+  "qs-ev-anon": {
+    "prefix": "qs-ev-anon",
+    "body": "document.querySelector('$1').addEventListener('${2:click}',() => {$0});",
+    "description": "qs + event + anon fn"
+  },
+
+  "qsa-ev-anon": {
+    "prefix": "qsa-ev-anon",
+    "body": "document.querySelector('$1').addEventListener('${2:click}',() => {$0});",
+    "description": "qs + event + anon fn"
+  },
+
+  "console.dir": {
+    "prefix": "dir",
+    "body": "console.dir($0);",
+    "description": "console.dir"
+  },
+
+  "anime qs event": {
+    "prefix": "anime-qs-event",
+    "body": "document.querySelector('$1').addEventListener('${2:click}', () => {anime({targets: '$3', duration: ${4:300}, easing: '${5:easeInOutCirc}', delay: ${6:anime.stagger(100)}}); });",
+    "description": "anime qs & event"
+  },
+
+  "anime qsa event": {
+    "prefix": "anime-qsa-event",
+    "body": "document.querySelectorAll('$1').addEventListener('${2:click}', () => {anime({targets: '$3', duration: ${4:300}, easing: '${5:easeInOutCirc}', delay: ${6:anime.stagger(100)}}); });",
+    "description": "anime qsa & event"
+  },
+
+  "anime timeline": {
+    "prefix": "anime-timeline",
+    "body": "const tl = anime.timeline({easing: '${1:easeInOutCirc}', duration: ${2:300} });tl.add({targets: '$3',}).add({targets: '',});",
+    "description": "anime timeline"
+  },
+
+  "anime pure": {
+    "prefix": "anime-pure",
+    "body": "anime({targets: '$1', duration: ${2:300}, easing: '${3:easeInOutCirc}', delay: ${4:anime.stagger(100)}});",
+    "description": "anime pure"
+  },
+
+  "trigger": {
+    "prefix": "trigger",
+    "body": "trigger({targets: '${1:img}', margin: '20%', action(node) {node.src = node.dataset.src;}});",
+    "description": "trigger"
+  },
+
+  "trigger anime": {
+    "prefix": "trigger-anime",
+    "body": "trigger({targets:'${1:img}',t:0.5,mb:'-10%',init(node){anime.set(node,{translateX:200,opacity:0});},action(node){anime({targets:node,duration:1000,translateX:0,easing:'easeOutQuint',opacity:{value:1,easing:'linear'}});}});",
+    "description": "trigger anime"
+  },
+
+  "Random Int": {
+    "prefix": "random-int-fn",
+    "body": "function randomInt(min, max) {\n\treturn Math.floor(Math.random() * (max - min + 1)) + min;\n}",
+    "description": "Random Int, mix & max inclusive"
+  }
+}
