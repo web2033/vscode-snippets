@@ -53,7 +53,7 @@
   "transform": {
     "scope": "css, scss",
     "prefix": "transform: *",
-    "body": "transform: ${1|translate,translateZ,rotate,rotateX,rotateY,rotateZ,scale,scaleX,scaleY,scaleZ,skew,skewX,skewY,perspective|}($0);",
+    "body": "transform: ${1|translate,translateZ,rotate,rotateX,rotateY,rotateZ,scale,scaleX,scaleY,scaleZ,skew,skewX,skewY,matrix3d,perspective|}($0);",
     "description": "transform options"
   },
 
