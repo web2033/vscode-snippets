@@ -19,7 +19,7 @@
 
   "qsa-ev-cb": {
     "prefix": "qsa-ev-cb",
-    "body": "document.querySelectorAll('$1').addEventListener('${2:click}', ${3:callback});",
+    "body": "document.querySelectorAll('$1').forEach(item => item.addEventListener('${2:click}', ${3:callback}));\n\n function callback(){}",
     "description": "qsa + event + named cb"
   },
 
@@ -31,8 +31,8 @@
 
   "qsa-ev-anon": {
     "prefix": "qsa-ev-anon",
-    "body": "document.querySelector('$1').addEventListener('${2:click}',() => {$0});",
-    "description": "qs + event + anon fn"
+    "body": "document.querySelectorAll('$1').forEach(item => item.addEventListener('${2:click}',() => {$0}));",
+    "description": "qsa + event + anon fn"
   },
 
   "console.dir": {
@@ -49,7 +49,7 @@
 
   "anime qsa event": {
     "prefix": "anime-qsa-event",
-    "body": "document.querySelectorAll('$1').addEventListener('${2:click}', () => {anime({targets: '$3', duration: ${4:300}, easing: '${5:easeInOutCirc}', delay: ${6:anime.stagger(100)}}); });",
+    "body": "document.querySelectorAll('$1').forEach(item => item.addEventListener('${2:click}', () => {anime({targets: '$3', duration: ${4:300}, easing: '${5:easeInOutCirc}', delay: ${6:anime.stagger(100)}}); }));",
     "description": "anime qsa & event"
   },
 
