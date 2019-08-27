@@ -1,6 +1,6 @@
 {
   "flex": {
-    "scope": "css, scss",
+    "scope": "css, scss, less",
     "prefix": "flex",
     "body": [
       "display: flex;",
@@ -12,7 +12,7 @@
   },
 
   "grid auto": {
-    "scope": "css, scss",
+    "scope": "css, scss, less",
     "prefix": "grid-fit-fill",
     "body": [
       "display: grid;",
@@ -23,70 +23,70 @@
   },
 
   "background with overlay": {
-    "scope": "css, scss",
+    "scope": "css, scss, less",
     "prefix": "bg: linear-gradient, url",
     "body": "background: linear-gradient(hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 0%, 0.2)),url(${1:https://web2033.com/cdn/jpg/w/fashion/64-1920w.jpg}) center / cover;",
     "description": "background with overlay"
   },
 
   "background center/cover": {
-    "scope": "css, scss",
+    "scope": "css, scss, less",
     "prefix": "bg: url, center/cover",
     "body": "background: url(${1:https://web2033.com/cdn/jpg/w/bg-striped/091-1920w.jpg}) center / cover;",
     "description": "background center/cover"
   },
 
   "transform: translateX": {
-    "scope": "css, scss",
+    "scope": "css, scss, less",
     "prefix": "tr: trX",
     "body": "transform: translateX($0);",
     "description": "transform: translateX()"
   },
 
   "transform: translateY": {
-    "scope": "css, scss",
+    "scope": "css, scss, less",
     "prefix": "tr: trY",
     "body": "transform: translateY($0);",
     "description": "transform: translateY()"
   },
 
   "transform": {
-    "scope": "css, scss",
+    "scope": "css, scss, less",
     "prefix": "transform: *",
     "body": "transform: ${1|translate,translateZ,rotate,rotateX,rotateY,rotateZ,scale,scaleX,scaleY,scaleZ,skew,skewX,skewY,matrix3d,perspective|}($0);",
     "description": "transform options"
   },
 
   "box-shadow": {
-    "scope": "css, scss",
+    "scope": "css, scss, less",
     "prefix": "box-shadow: example*",
     "body": "box-shadow: 0px 5px 15px 0px hsla(0, 0%, 0%, 0.2);",
     "description": "box-shadow example"
   },
 
   "color-var": {
-    "scope": "css, scss",
+    "scope": "css, scss, less",
     "prefix": "color: var(--*)",
     "body": "color: ${1|var(--primary),var(--accent),var(--header),var(--text),var(--bg), white|};",
     "description": "color using variable"
   },
 
   "display": {
-    "scope": "css, scss",
+    "scope": "css, scss, less",
     "prefix": "display: *",
     "body": "display: ${1|grid,flex,none,block,inline,inline-block,inline-grid,inline-flex|};",
     "description": "display options"
   },
 
   "position": {
-    "scope": "css, scss",
+    "scope": "css, scss, less",
     "prefix": "position: *",
     "body": "position: ${1|relative,absolute,fixed,sticky|};",
     "description": "position options"
   },
 
   "root": {
-    "scope": "css, scss",
+    "scope": "css, scss, less",
     "prefix": "root",
     "body": [
       ":root {",
@@ -101,11 +101,11 @@
   },
 
   "media": {
-    "scope": "css, scss",
+    "scope": "css, scss, less",
     "prefix": "media(){}",
     "body": [
-      "@media (${1|max-width,min-width|}: ${2|479,480,767,768,980,981|}px) {",
-      "\t${3:body} {",
+      "@media (${1|max-width,min-width|}: ${2|479,480,767,768,980,981|}px and ${3|max-width,min-width|}: ${4|479,480,767,768,980,981|}px) {",
+      "\t${5:body} {",
       "\t\t$0",
       "\t}",
       "}"
