@@ -71,6 +71,13 @@
     "description": "color using variable"
   },
 
+  "background-color-var": {
+    "scope": "css, scss",
+    "prefix": "bgc",
+    "body": "background-color: ${1|var(--primary),var(--accent),var(--header),var(--text),var(--bg), white|};",
+    "description": "background-color using variable"
+  },
+
   "display": {
     "scope": "css, scss",
     "prefix": "display: *",
